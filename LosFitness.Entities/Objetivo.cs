@@ -13,4 +13,6 @@ public class Objetivo: EntityBase
     [Required]
     public string Describcion { get; set; }
 
+    public bool Check { get; set; }
+
 }
