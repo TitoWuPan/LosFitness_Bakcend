@@ -15,6 +15,24 @@ namespace LosFitness.API.Controllers
         {
             _context = context;
         }
+        
+        [HttpPost("Recompensa")]
+        public async Task<ActionResult> Post(Dto.Request.DtoRecompensas request)
+        {
+            var entity = new Recompensa
+            {
+                Titulo = request.Titulo,
+                Describcion = request.Describcion,
+                Status = true
+            };
+
+            _context.Recompensas.Add(entity);
+            await _context.SaveChangesAsync();
+
+            HttpContext.Response.Headers.Add("location", $"/api/usuario/{entity.Id}*");
+
+            return Ok();
+        }
 
         [HttpGet]
         public async Task<ActionResult<ICollection<Recompensa>>> Get()

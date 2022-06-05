@@ -8,23 +8,23 @@ namespace LosFitness.API.Controllers
 {
     [ApiController]
     [Route("api/[Controller]")]
-    public class ActividadControler : ControllerBase
+    public class UsuarioControler : ControllerBase
     {
         private readonly LosFitnessDbContext _context;
                                                                                                                                                                                                                                                                                                                                                                 
-        public ActividadControler(LosFitnessDbContext context)
+        public UsuarioControler(LosFitnessDbContext context)
         {
             _context = context;
         }
 
         [HttpGet]
-        public async Task<ActionResult<BaseResponseGeneric<ICollection<Actividad>>>> Get()
+        public async Task<ActionResult<BaseResponseGeneric<ICollection<Usuario>>>> Get()
         {
-            var response = new BaseResponseGeneric<ICollection<Actividad>>();
+            var response = new BaseResponseGeneric<ICollection<Usuario>>();
             
             try
             {
-                response.Result = await _context.Actividads.ToListAsync();
+                response.Result = await _context.Usuarios.ToListAsync();
                 response.Success = true;
                 return Ok(response);
             }
@@ -38,9 +38,9 @@ namespace LosFitness.API.Controllers
         }
 
         [HttpGet("{id:int}")]
-        public async Task<ActionResult<Actividad>> Get(int id)
+        public async Task<ActionResult<Usuario>> Get(int id)
         {
-            var entity = await _context.Actividads.FindAsync(id);
+            var entity = await _context.Usuarios.FindAsync(id);
             if (entity == null)
             {
                 return NotFound("No se encontró el registro");
@@ -49,51 +49,55 @@ namespace LosFitness.API.Controllers
             return Ok(entity);
         }
 
-        [HttpPost]
-        public async Task<ActionResult> Post(Dto.Request.DtoActividad request)
+        [HttpPost("Registro")]
+        public async Task<ActionResult> Post(Dto.Request.DtoUsuario request)
         {
-            var entity = new Actividad
+            var entity = new Usuario
             {
-                Titulo = request.Titulo,
-                Describcion = request.Describcion,
+                Nombre = request.Nombre,
+                Apellido = request.Apellido,
+                Genero = request.Genero,
+                Premiun = false,
+                ImageURL = request.ImageURL,
                 Status = true
             };
 
-            _context.Actividads.Add(entity);
+            _context.Usuarios.Add(entity);
             await _context.SaveChangesAsync();
 
-            HttpContext.Response.Headers.Add("location", $"/api/actividad/{entity.Id}*");
+            HttpContext.Response.Headers.Add("location", $"/api/usuario/{entity.Id}*");
 
             return Ok();
         }
 
-        [HttpPut("{id:int}")]
-        public async Task<ActionResult> Put(int id, Dto.Request.DtoActividad request)
+        [HttpPut("Cambiar datos/{id:int}")]
+        public async Task<ActionResult> PutFalse(int id, Dto.Request.DtoUsuario request)
         {
-            var entity = await _context.Actividads.FindAsync(id);
+            var entity = await _context.Usuarios.FindAsync(id);
 
             if (entity == null) return NotFound();
 
-            entity.Titulo = request.Titulo;
-            entity.Describcion = request.Describcion;
+            entity.Nombre = request.Nombre;
+            entity.Apellido = request.Apellido;
+            entity.Genero = request.Genero;
+            entity.ImageURL = request.ImageURL;
 
             _context.Entry(entity).State = EntityState.Modified;
             await _context.SaveChangesAsync();
 
             return Ok(new { Id = id });
         }
-
-        [HttpDelete("{id:int}")]
-        public async Task<ActionResult<Actividad>> Delete(int id)
+        [HttpDelete("Eliminar Cuenta/{id:int}")]
+        public async Task<ActionResult<Usuario>> Delete(int id)
         {
-            var entity = await _context.Actividads.FindAsync(id);
+            var entity = await _context.Usuarios.FindAsync(id);
             if (entity == null)
             {
-                return NotFound("No se encontró el registro");
+                return NotFound("No se encontró el usuario");
             }
             else
             {
-                _context.Actividads.Remove(entity);
+                _context.Usuarios.Remove(entity);
                 _context.SaveChanges();
                 return Ok();
             }
