@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "H6CaKcth5qeDYubWYe5zP+G+aLaWSu9J406DQK4AVGU=",
+  "Source": "LosFitness.API",
+  "BasePath": "_content/LosFitness.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
