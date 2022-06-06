@@ -9,5 +9,6 @@ public class Horario_Actividad : EntityBase
     public int ActividadId { get; set; }
     public Actividad Actividad  { get; set; }
 
-    public DateTime Fecha { get; set; }
+    public DateTime FechaInicio { get; set; }
+    public DateTime FechaFinal { get; set; }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ji7hH/ypYoVD+xjydyPL+D0JeThVnZiHFkCOE3rPuLcA4Ch3wFQmHyHFKE018MNuS6NoCn+ToifTmM+P20dXHA==",
+  "dgSpecHash": "32nnPqoze3h23Xa/hRhBZoWHsadZO3TSEDK+1mFZUoecYa7s1Xovvpq+HouYUSfHVneoSsq/PVaF4TywITFTdQ==",
   "success": true,
-  "projectFilePath": "C:\\Software\\tb3 los fitness\\backend-los-fitness\\LosFitness.Dto\\LosFitness.Dto.csproj",
+  "projectFilePath": "C:\\Users\\Nicola Rovegno\\Source\\Repos\\LosFitness_Bakcend\\LosFitness.Dto\\LosFitness.Dto.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

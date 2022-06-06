@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Software\\tb3 los fitness\\backend-los-fitness\\LosFitness.Dto\\LosFitness.Dto.csproj": {}
+    "C:\\Users\\Nicola Rovegno\\Source\\Repos\\LosFitness_Bakcend\\LosFitness.Dto\\LosFitness.Dto.csproj": {}
   },
   "projects": {
-    "C:\\Software\\tb3 los fitness\\backend-los-fitness\\LosFitness.Dto\\LosFitness.Dto.csproj": {
+    "C:\\Users\\Nicola Rovegno\\Source\\Repos\\LosFitness_Bakcend\\LosFitness.Dto\\LosFitness.Dto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Software\\tb3 los fitness\\backend-los-fitness\\LosFitness.Dto\\LosFitness.Dto.csproj",
+        "projectUniqueName": "C:\\Users\\Nicola Rovegno\\Source\\Repos\\LosFitness_Bakcend\\LosFitness.Dto\\LosFitness.Dto.csproj",
         "projectName": "LosFitness.Dto",
-        "projectPath": "C:\\Software\\tb3 los fitness\\backend-los-fitness\\LosFitness.Dto\\LosFitness.Dto.csproj",
-        "packagesPath": "C:\\Users\\Tito\\.nuget\\packages\\",
-        "outputPath": "C:\\Software\\tb3 los fitness\\backend-los-fitness\\LosFitness.Dto\\obj\\",
+        "projectPath": "C:\\Users\\Nicola Rovegno\\Source\\Repos\\LosFitness_Bakcend\\LosFitness.Dto\\LosFitness.Dto.csproj",
+        "packagesPath": "C:\\Users\\Nicola Rovegno\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nicola Rovegno\\Source\\Repos\\LosFitness_Bakcend\\LosFitness.Dto\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Tito\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Nicola Rovegno\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
