@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nicola Rovegno\\Source\\Repos\\LosFitness_Bakcend\\LosFitness.Dto\\LosFitness.Dto.csproj": {}
+    "C:\\Users\\Nicola Rovegno\\source\\repos\\LosFitness_Bakcend\\LosFitness.Dto\\LosFitness.Dto.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nicola Rovegno\\Source\\Repos\\LosFitness_Bakcend\\LosFitness.Dto\\LosFitness.Dto.csproj": {
+    "C:\\Users\\Nicola Rovegno\\source\\repos\\LosFitness_Bakcend\\LosFitness.Dto\\LosFitness.Dto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nicola Rovegno\\Source\\Repos\\LosFitness_Bakcend\\LosFitness.Dto\\LosFitness.Dto.csproj",
+        "projectUniqueName": "C:\\Users\\Nicola Rovegno\\source\\repos\\LosFitness_Bakcend\\LosFitness.Dto\\LosFitness.Dto.csproj",
         "projectName": "LosFitness.Dto",
-        "projectPath": "C:\\Users\\Nicola Rovegno\\Source\\Repos\\LosFitness_Bakcend\\LosFitness.Dto\\LosFitness.Dto.csproj",
+        "projectPath": "C:\\Users\\Nicola Rovegno\\source\\repos\\LosFitness_Bakcend\\LosFitness.Dto\\LosFitness.Dto.csproj",
         "packagesPath": "C:\\Users\\Nicola Rovegno\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nicola Rovegno\\Source\\Repos\\LosFitness_Bakcend\\LosFitness.Dto\\obj\\",
+        "outputPath": "C:\\Users\\Nicola Rovegno\\source\\repos\\LosFitness_Bakcend\\LosFitness.Dto\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Nicola Rovegno\\AppData\\Roaming\\NuGet\\NuGet.Config",
