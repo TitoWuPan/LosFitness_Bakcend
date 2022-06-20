@@ -34,7 +34,6 @@ namespace LosFitness.API.Controllers
                 return response;
 
             }
-           
         }
 
         [HttpGet("{id:int}")]
@@ -49,7 +48,7 @@ namespace LosFitness.API.Controllers
             return Ok(entity);
         }
 
-        [HttpPost("Registro")]
+        [HttpPost("register")]
         public async Task<ActionResult> Post(Dto.Request.DtoUsuario request)
         {
             var entity = new Usuario
@@ -70,7 +69,7 @@ namespace LosFitness.API.Controllers
             return Ok();
         }
 
-        [HttpPut("Cambiar datos/{id:int}")]
+        [HttpPut("update/{id:int}")]
         public async Task<ActionResult> PutFalse(int id, Dto.Request.DtoUsuario request)
         {
             var entity = await _context.Usuarios.FindAsync(id);
@@ -87,7 +86,7 @@ namespace LosFitness.API.Controllers
 
             return Ok(new { Id = id });
         }
-        [HttpDelete("Eliminar Cuenta/{id:int}")]
+        [HttpDelete("drop/{id:int}")]
         public async Task<ActionResult<Usuario>> Delete(int id)
         {
             var entity = await _context.Usuarios.FindAsync(id);

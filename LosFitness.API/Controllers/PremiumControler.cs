@@ -17,7 +17,7 @@ namespace LosFitness.API.Controllers
             _context = context;
         }
 
-        [HttpPut("Dar/{id:int}")]
+        [HttpPut("dar/{id:int}")]
         public async Task<ActionResult> PutTrue(int id, Dto.Request.DtoUsuario request)
         {
             var entity = await _context.Usuarios.FindAsync(id);
@@ -32,7 +32,7 @@ namespace LosFitness.API.Controllers
             return Ok(new { Id = id });
         }
 
-        [HttpPut("Quitar/{id:int}")]
+        [HttpPut("quitar/{id:int}")]
         public async Task<ActionResult> PutFalse(int id, Dto.Request.DtoUsuario request)
         {
             var entity = await _context.Usuarios.FindAsync(id);

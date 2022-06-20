@@ -26,7 +26,7 @@ namespace LosFitness.API.Controllers
             return Ok(response);
         }
 
-        [HttpPost("Dar Recompensa a {id:int}")]
+        [HttpPost("reward/{id:int}")]
         public async Task<ActionResult> Post(int id,Dto.Request.DtoRecompensas_Usuario request)
         {
             var entity = new Recompesa_Usuario
