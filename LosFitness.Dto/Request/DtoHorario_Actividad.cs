@@ -12,6 +12,7 @@ public class DtoHorario_Actividad
 
     public int ActividadId { get; set; }
 
-    public DateTime Fecha { get; set; }
+    public DateTime FechaInicio { get; set; }
+    public DateTime FechaFinal { get; set; }
 }
 

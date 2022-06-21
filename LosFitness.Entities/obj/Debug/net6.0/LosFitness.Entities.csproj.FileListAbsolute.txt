@@ -10,3 +10,15 @@ C:\Software\tb3 los fitness\backend-los-fitness\LosFitness.Entities\obj\Debug\ne
 C:\Software\tb3 los fitness\backend-los-fitness\LosFitness.Entities\obj\Debug\net6.0\refint\LosFitness.Entities.dll
 C:\Software\tb3 los fitness\backend-los-fitness\LosFitness.Entities\obj\Debug\net6.0\LosFitness.Entities.pdb
 C:\Software\tb3 los fitness\backend-los-fitness\LosFitness.Entities\obj\Debug\net6.0\ref\LosFitness.Entities.dll
+C:\Users\Nicola Rovegno\Source\Repos\LosFitness_Bakcend\LosFitness.Entities\bin\Debug\net6.0\LosFitness.Entities.deps.json
+C:\Users\Nicola Rovegno\Source\Repos\LosFitness_Bakcend\LosFitness.Entities\bin\Debug\net6.0\LosFitness.Entities.dll
+C:\Users\Nicola Rovegno\Source\Repos\LosFitness_Bakcend\LosFitness.Entities\bin\Debug\net6.0\LosFitness.Entities.pdb
+C:\Users\Nicola Rovegno\Source\Repos\LosFitness_Bakcend\LosFitness.Entities\obj\Debug\net6.0\LosFitness.Entities.csproj.AssemblyReference.cache
+C:\Users\Nicola Rovegno\Source\Repos\LosFitness_Bakcend\LosFitness.Entities\obj\Debug\net6.0\LosFitness.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nicola Rovegno\Source\Repos\LosFitness_Bakcend\LosFitness.Entities\obj\Debug\net6.0\LosFitness.Entities.AssemblyInfoInputs.cache
+C:\Users\Nicola Rovegno\Source\Repos\LosFitness_Bakcend\LosFitness.Entities\obj\Debug\net6.0\LosFitness.Entities.AssemblyInfo.cs
+C:\Users\Nicola Rovegno\Source\Repos\LosFitness_Bakcend\LosFitness.Entities\obj\Debug\net6.0\LosFitness.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Nicola Rovegno\Source\Repos\LosFitness_Bakcend\LosFitness.Entities\obj\Debug\net6.0\LosFitness.Entities.dll
+C:\Users\Nicola Rovegno\Source\Repos\LosFitness_Bakcend\LosFitness.Entities\obj\Debug\net6.0\refint\LosFitness.Entities.dll
+C:\Users\Nicola Rovegno\Source\Repos\LosFitness_Bakcend\LosFitness.Entities\obj\Debug\net6.0\LosFitness.Entities.pdb
+C:\Users\Nicola Rovegno\Source\Repos\LosFitness_Bakcend\LosFitness.Entities\obj\Debug\net6.0\ref\LosFitness.Entities.dll
