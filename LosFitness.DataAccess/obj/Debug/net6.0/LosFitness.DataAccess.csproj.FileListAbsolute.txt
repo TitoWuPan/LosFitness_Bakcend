@@ -15,3 +15,20 @@ C:\Software\tb3 los fitness\backend-los-fitness\LosFitness.DataAccess\obj\Debug\
 C:\Software\tb3 los fitness\backend-los-fitness\LosFitness.DataAccess\obj\Debug\net6.0\LosFitness.DataAccess.pdb
 C:\Software\tb3 los fitness\backend-los-fitness\LosFitness.DataAccess\obj\Debug\net6.0\LosFitness.DataAccess.genruntimeconfig.cache
 C:\Software\tb3 los fitness\backend-los-fitness\LosFitness.DataAccess\obj\Debug\net6.0\ref\LosFitness.DataAccess.dll
+C:\Users\Diego\Desktop\Demo\api\LosFitness.DataAccess\bin\Debug\net6.0\LosFitness.DataAccess.deps.json
+C:\Users\Diego\Desktop\Demo\api\LosFitness.DataAccess\bin\Debug\net6.0\LosFitness.DataAccess.runtimeconfig.json
+C:\Users\Diego\Desktop\Demo\api\LosFitness.DataAccess\bin\Debug\net6.0\LosFitness.DataAccess.dll
+C:\Users\Diego\Desktop\Demo\api\LosFitness.DataAccess\bin\Debug\net6.0\LosFitness.DataAccess.pdb
+C:\Users\Diego\Desktop\Demo\api\LosFitness.DataAccess\bin\Debug\net6.0\LosFitness.Entities.dll
+C:\Users\Diego\Desktop\Demo\api\LosFitness.DataAccess\bin\Debug\net6.0\LosFitness.Entities.pdb
+C:\Users\Diego\Desktop\Demo\api\LosFitness.DataAccess\obj\Debug\net6.0\LosFitness.DataAccess.csproj.AssemblyReference.cache
+C:\Users\Diego\Desktop\Demo\api\LosFitness.DataAccess\obj\Debug\net6.0\LosFitness.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Diego\Desktop\Demo\api\LosFitness.DataAccess\obj\Debug\net6.0\LosFitness.DataAccess.AssemblyInfoInputs.cache
+C:\Users\Diego\Desktop\Demo\api\LosFitness.DataAccess\obj\Debug\net6.0\LosFitness.DataAccess.AssemblyInfo.cs
+C:\Users\Diego\Desktop\Demo\api\LosFitness.DataAccess\obj\Debug\net6.0\LosFitness.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Diego\Desktop\Demo\api\LosFitness.DataAccess\obj\Debug\net6.0\LosFitness.DataAccess.csproj.CopyComplete
+C:\Users\Diego\Desktop\Demo\api\LosFitness.DataAccess\obj\Debug\net6.0\LosFitness.DataAccess.dll
+C:\Users\Diego\Desktop\Demo\api\LosFitness.DataAccess\obj\Debug\net6.0\refint\LosFitness.DataAccess.dll
+C:\Users\Diego\Desktop\Demo\api\LosFitness.DataAccess\obj\Debug\net6.0\LosFitness.DataAccess.pdb
+C:\Users\Diego\Desktop\Demo\api\LosFitness.DataAccess\obj\Debug\net6.0\LosFitness.DataAccess.genruntimeconfig.cache
+C:\Users\Diego\Desktop\Demo\api\LosFitness.DataAccess\obj\Debug\net6.0\ref\LosFitness.DataAccess.dll
