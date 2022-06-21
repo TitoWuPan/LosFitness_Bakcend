@@ -22,3 +22,20 @@ C:\Users\PC GAMER\Documents\GitHub\LosFitness_Bakcend\LosFitness.Service\obj\Deb
 C:\Users\PC GAMER\Documents\GitHub\LosFitness_Bakcend\LosFitness.Service\obj\Debug\net6.0\refint\LosFitness.Service.dll
 C:\Users\PC GAMER\Documents\GitHub\LosFitness_Bakcend\LosFitness.Service\obj\Debug\net6.0\LosFitness.Service.pdb
 C:\Users\PC GAMER\Documents\GitHub\LosFitness_Bakcend\LosFitness.Service\obj\Debug\net6.0\ref\LosFitness.Service.dll
+C:\Users\PC GAMER\Desktop\Nueva carpeta (3)\LosFitness_Bakcend-rama-eduardo\LosFitness.Service\bin\Debug\net6.0\LosFitness.Service.deps.json
+C:\Users\PC GAMER\Desktop\Nueva carpeta (3)\LosFitness_Bakcend-rama-eduardo\LosFitness.Service\bin\Debug\net6.0\LosFitness.Service.dll
+C:\Users\PC GAMER\Desktop\Nueva carpeta (3)\LosFitness_Bakcend-rama-eduardo\LosFitness.Service\bin\Debug\net6.0\LosFitness.Service.pdb
+C:\Users\PC GAMER\Desktop\Nueva carpeta (3)\LosFitness_Bakcend-rama-eduardo\LosFitness.Service\bin\Debug\net6.0\LosFitness.DataAccess.dll
+C:\Users\PC GAMER\Desktop\Nueva carpeta (3)\LosFitness_Bakcend-rama-eduardo\LosFitness.Service\bin\Debug\net6.0\LosFitness.Entities.dll
+C:\Users\PC GAMER\Desktop\Nueva carpeta (3)\LosFitness_Bakcend-rama-eduardo\LosFitness.Service\bin\Debug\net6.0\LosFitness.DataAccess.pdb
+C:\Users\PC GAMER\Desktop\Nueva carpeta (3)\LosFitness_Bakcend-rama-eduardo\LosFitness.Service\bin\Debug\net6.0\LosFitness.Entities.pdb
+C:\Users\PC GAMER\Desktop\Nueva carpeta (3)\LosFitness_Bakcend-rama-eduardo\LosFitness.Service\obj\Debug\net6.0\LosFitness.Service.csproj.AssemblyReference.cache
+C:\Users\PC GAMER\Desktop\Nueva carpeta (3)\LosFitness_Bakcend-rama-eduardo\LosFitness.Service\obj\Debug\net6.0\LosFitness.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC GAMER\Desktop\Nueva carpeta (3)\LosFitness_Bakcend-rama-eduardo\LosFitness.Service\obj\Debug\net6.0\LosFitness.Service.AssemblyInfoInputs.cache
+C:\Users\PC GAMER\Desktop\Nueva carpeta (3)\LosFitness_Bakcend-rama-eduardo\LosFitness.Service\obj\Debug\net6.0\LosFitness.Service.AssemblyInfo.cs
+C:\Users\PC GAMER\Desktop\Nueva carpeta (3)\LosFitness_Bakcend-rama-eduardo\LosFitness.Service\obj\Debug\net6.0\LosFitness.Service.csproj.CoreCompileInputs.cache
+C:\Users\PC GAMER\Desktop\Nueva carpeta (3)\LosFitness_Bakcend-rama-eduardo\LosFitness.Service\obj\Debug\net6.0\LosFitness.Service.csproj.CopyComplete
+C:\Users\PC GAMER\Desktop\Nueva carpeta (3)\LosFitness_Bakcend-rama-eduardo\LosFitness.Service\obj\Debug\net6.0\LosFitness.Service.dll
+C:\Users\PC GAMER\Desktop\Nueva carpeta (3)\LosFitness_Bakcend-rama-eduardo\LosFitness.Service\obj\Debug\net6.0\refint\LosFitness.Service.dll
+C:\Users\PC GAMER\Desktop\Nueva carpeta (3)\LosFitness_Bakcend-rama-eduardo\LosFitness.Service\obj\Debug\net6.0\LosFitness.Service.pdb
+C:\Users\PC GAMER\Desktop\Nueva carpeta (3)\LosFitness_Bakcend-rama-eduardo\LosFitness.Service\obj\Debug\net6.0\ref\LosFitness.Service.dll

@@ -11,6 +11,7 @@
           "LosFitness.DataAccess": "1.0.0",
           "LosFitness.Dto": "1.0.0",
           "LosFitness.Entities": "1.0.0",
+          "LosFitness.Service": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "6.0.5",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
@@ -496,6 +497,16 @@
         "runtime": {
           "LosFitness.Entities.dll": {}
         }
+      },
+      "LosFitness.Service/1.0.0": {
+        "dependencies": {
+          "LosFitness.DataAccess": "1.0.0",
+          "LosFitness.Entities": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.5"
+        },
+        "runtime": {
+          "LosFitness.Service.dll": {}
+        }
       }
     }
   },
@@ -852,6 +863,11 @@
       "sha512": ""
     },
     "LosFitness.Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LosFitness.Service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

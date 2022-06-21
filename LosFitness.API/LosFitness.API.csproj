@@ -18,6 +18,9 @@
     <ProjectReference Include="..\LosFitness.DataAccess\LosFitness.DataAccess.csproj" />
     <ProjectReference Include="..\LosFitness.Dto\LosFitness.Dto.csproj" />
     <ProjectReference Include="..\LosFitness.Entities\LosFitness.Entities.csproj" />
+    <ProjectReference Include="..\LosFitness.Service\LosFitness.Service.csproj" />
   </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties properties_4launchsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 </Project>

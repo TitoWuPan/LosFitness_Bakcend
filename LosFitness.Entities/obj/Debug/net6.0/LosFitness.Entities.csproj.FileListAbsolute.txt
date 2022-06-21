@@ -22,3 +22,15 @@ C:\Users\PC GAMER\Documents\GitHub\LosFitness_Bakcend\LosFitness.Entities\obj\De
 C:\Users\PC GAMER\Documents\GitHub\LosFitness_Bakcend\LosFitness.Entities\obj\Debug\net6.0\refint\LosFitness.Entities.dll
 C:\Users\PC GAMER\Documents\GitHub\LosFitness_Bakcend\LosFitness.Entities\obj\Debug\net6.0\LosFitness.Entities.pdb
 C:\Users\PC GAMER\Documents\GitHub\LosFitness_Bakcend\LosFitness.Entities\obj\Debug\net6.0\ref\LosFitness.Entities.dll
+C:\Users\PC GAMER\Desktop\Nueva carpeta (3)\LosFitness_Bakcend-rama-eduardo\LosFitness.Entities\bin\Debug\net6.0\LosFitness.Entities.deps.json
+C:\Users\PC GAMER\Desktop\Nueva carpeta (3)\LosFitness_Bakcend-rama-eduardo\LosFitness.Entities\bin\Debug\net6.0\LosFitness.Entities.dll
+C:\Users\PC GAMER\Desktop\Nueva carpeta (3)\LosFitness_Bakcend-rama-eduardo\LosFitness.Entities\bin\Debug\net6.0\LosFitness.Entities.pdb
+C:\Users\PC GAMER\Desktop\Nueva carpeta (3)\LosFitness_Bakcend-rama-eduardo\LosFitness.Entities\obj\Debug\net6.0\LosFitness.Entities.csproj.AssemblyReference.cache
+C:\Users\PC GAMER\Desktop\Nueva carpeta (3)\LosFitness_Bakcend-rama-eduardo\LosFitness.Entities\obj\Debug\net6.0\LosFitness.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC GAMER\Desktop\Nueva carpeta (3)\LosFitness_Bakcend-rama-eduardo\LosFitness.Entities\obj\Debug\net6.0\LosFitness.Entities.AssemblyInfoInputs.cache
+C:\Users\PC GAMER\Desktop\Nueva carpeta (3)\LosFitness_Bakcend-rama-eduardo\LosFitness.Entities\obj\Debug\net6.0\LosFitness.Entities.AssemblyInfo.cs
+C:\Users\PC GAMER\Desktop\Nueva carpeta (3)\LosFitness_Bakcend-rama-eduardo\LosFitness.Entities\obj\Debug\net6.0\LosFitness.Entities.csproj.CoreCompileInputs.cache
+C:\Users\PC GAMER\Desktop\Nueva carpeta (3)\LosFitness_Bakcend-rama-eduardo\LosFitness.Entities\obj\Debug\net6.0\LosFitness.Entities.dll
+C:\Users\PC GAMER\Desktop\Nueva carpeta (3)\LosFitness_Bakcend-rama-eduardo\LosFitness.Entities\obj\Debug\net6.0\refint\LosFitness.Entities.dll
+C:\Users\PC GAMER\Desktop\Nueva carpeta (3)\LosFitness_Bakcend-rama-eduardo\LosFitness.Entities\obj\Debug\net6.0\LosFitness.Entities.pdb
+C:\Users\PC GAMER\Desktop\Nueva carpeta (3)\LosFitness_Bakcend-rama-eduardo\LosFitness.Entities\obj\Debug\net6.0\ref\LosFitness.Entities.dll

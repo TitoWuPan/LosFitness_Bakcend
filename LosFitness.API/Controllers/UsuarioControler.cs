@@ -1,5 +1,6 @@
 ﻿using LosFitness.DataAccess;
 using LosFitness.Entities;
+using LosFitness.Service;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using static LosFitness.Dto.Request.BaseResponse;
@@ -8,16 +9,70 @@ namespace LosFitness.API.Controllers
 {
     [ApiController]
     [Route("api/[Controller]")]
-    public class UsuarioControler : ControllerBase
+    public class UsuarioController : ControllerBase
     {
-        private readonly LosFitnessDbContext _context;
+        //private readonly LosFitnessDbContext _context;
 
-        public UsuarioControler(LosFitnessDbContext context)
+        private readonly IUsuarioService _genreService;
+        /*public UsuarioController(LosFitnessDbContext context)
         {
             _context = context;
+        }*/
+        public UsuarioController(IUsuarioService genreService)
+        {
+            this._genreService = genreService;
+        }
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Usuario>>> Get()
+        {
+            return await _genreService.GetGenres();
         }
 
-        [HttpGet]
+        [HttpGet("{id}", Name ="GetUsuario")]
+        public async Task<ActionResult<Usuario>> Get(int id)
+        {
+            var genre = await _genreService.GetGenre(id);
+
+            if(genre == null)
+            {
+                return NotFound();
+            }
+            return Ok(genre);
+        }
+        
+        [HttpPost]
+        public async Task<ActionResult<Usuario>> Post(Usuario genre)
+        {
+            await _genreService.CreateGenre(genre);
+            return CreatedAtRoute("GetUsuario", new { id = genre.Id }, genre);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> Delete(int id)
+        {
+            var genre=await _genreService.GetGenre(id);
+            if(genre==null)
+            {
+                return NotFound();    
+            }
+
+            await _genreService.DeleteGenre(genre);
+            return NoContent();
+        }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult> Put(int id, Usuario genre)
+        {
+            if (id != genre.Id)
+            {
+                return BadRequest();
+            }
+
+            await _genreService.UpdateGenre(genre);
+
+            return NoContent();
+        }
+        /*[HttpGet]
         public async Task<ActionResult<BaseResponseGeneric<ICollection<Usuario>>>> Get()
         {
             var response = new BaseResponseGeneric<ICollection<Usuario>>();
@@ -103,6 +158,6 @@ namespace LosFitness.API.Controllers
             }
 
             return Ok(entity);
-        }
+        }*/
     }
 }

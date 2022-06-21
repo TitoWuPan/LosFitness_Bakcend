@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TtMf5lpXf2Fh/sedgLg09s3xOafr+LIoPcXrGBWl/OhJ/Kq2Ag75JG9tpe4L7Hpmr/020vxWssCf8kWWg5YFQw==",
+  "dgSpecHash": "UpyBdBXZs8UfBm5Syp73pvVgUTNdnkgdHE/xLMJ696QEQaVje3/gjuYH+bmBUz/Hnrz/+2/mhWb/gOCE0DUyYA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\PC GAMER\\Documents\\GitHub\\LosFitness_Bakcend\\LosFitness.API\\LosFitness.API.csproj",
+  "projectFilePath": "C:\\Users\\PC GAMER\\Desktop\\Nueva carpeta (3)\\LosFitness_Bakcend-rama-eduardo\\LosFitness.API\\LosFitness.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC GAMER\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\PC GAMER\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
