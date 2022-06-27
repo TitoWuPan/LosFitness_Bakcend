@@ -9,26 +9,26 @@ namespace LosFitness.API.Controllers
 {
     [ApiController]
     [Route("api/[Controller]")]
-    public class ObjetivoControler : ControllerBase
+    public class PlanControler : ControllerBase
     {
-        private readonly IObjetivoService _ObjetivoService;
+        private readonly IPlanService _PlanService;
                                                                                                                                                                                                                                                                                                                                                                 
-        public ObjetivoControler(IObjetivoService ObjetivoService)
+        public PlanControler(IPlanService PlanService)
         {
-            this._ObjetivoService = ObjetivoService;
+            this._PlanService = PlanService;
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Objetivo>>> Get()
+        public async Task<ActionResult<IEnumerable<Plan>>> Get()
         {
-            return await _ObjetivoService.GetObjetivos();
+            return await _PlanService.GetPlans();
 
         }
 
-        [HttpGet("{id:int}", Name = "GetObjetivo")]
-        public async Task<ActionResult<Objetivo>> Get(int id)
+        [HttpGet("{id:int}", Name = "GetPlan")]
+        public async Task<ActionResult<Plan>> Get(int id)
         {
-            var entity = await _ObjetivoService.GetObjetivo(id);
+            var entity = await _PlanService.GetPlan(id);
 
             if (entity == null)
             {
@@ -39,20 +39,20 @@ namespace LosFitness.API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Objetivo>> Post(Objetivo Objetivo)
+        public async Task<ActionResult<Plan>> Post(Plan Plan)
         {
-            await _ObjetivoService.CreateObjetivo(Objetivo);
-            return CreatedAtRoute("GetObjetivo", new { id = Objetivo.Id }, Objetivo);
+            await _PlanService.CreatePlan(Plan);
+            return CreatedAtRoute("GetPlan", new { id = Plan.Id }, Plan);
 
         }
 
         [HttpPut("{id:int}")]
-        public async Task<ActionResult> Put(int id, Objetivo Objetivo)
+        public async Task<ActionResult> Put(int id, Plan Plan)
         {
 
-            if (id != Objetivo.Id) return BadRequest();
+            if (id != Plan.Id) return BadRequest();
 
-            await _ObjetivoService.UpdateObjetivo(Objetivo);
+            await _PlanService.UpdatePlan(Plan);
             return NoContent();
 
         }
@@ -60,14 +60,14 @@ namespace LosFitness.API.Controllers
         [HttpDelete("{id:int}")]
         public async Task<ActionResult> Delete(int id)
         {
-            var Objetivo = await _ObjetivoService.GetObjetivo(id);
-            if (Objetivo == null)
+            var Plan = await _PlanService.GetPlan(id);
+            if (Plan == null)
             {
                 return NotFound();
             }
             else
             {
-                await _ObjetivoService.DeleteObjetivo(Objetivo);
+                await _PlanService.DeletePlan(Plan);
                 return NoContent();
             }
         }

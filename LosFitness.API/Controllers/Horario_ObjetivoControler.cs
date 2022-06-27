@@ -1,7 +1,9 @@
 ﻿using LosFitness.DataAccess;
 using LosFitness.Entities;
+using LosFitness.Service;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using static LosFitness.Dto.Request.BaseResponse;
 
 namespace LosFitness.API.Controllers
 {
@@ -9,88 +11,63 @@ namespace LosFitness.API.Controllers
     [Route("api/[Controller]")]
     public class Horario_ObjetivoControler : ControllerBase
     {
-        private readonly LosFitnessDbContext _context;
+        private readonly IHorario_ObjetivoService _Horario_ObjetivoService;
 
-        public Horario_ObjetivoControler(LosFitnessDbContext context)
+        public Horario_ObjetivoControler(IHorario_ObjetivoService Horario_ObjetivoService)
         {
-            _context = context;
+            this._Horario_ObjetivoService = Horario_ObjetivoService;
         }
 
         [HttpGet]
-        public async Task<ActionResult<ICollection<Horario_Objetivo>>> Get()
+        public async Task<ActionResult<IEnumerable<Horario_Objetivo>>> Get()
         {
-            ICollection<Horario_Objetivo> response;
-
-            response = await _context.Horario_Objetivos.ToListAsync();
-            
-            return Ok(response);
+            return await _Horario_ObjetivoService.GetHorario_Objetivos();
         }
 
-        [HttpGet("{id:int}")]
+        [HttpGet("{id:int}", Name = "GetHorario_Objetivo")]
         public async Task<ActionResult<Horario_Objetivo>> Get(int id)
         {
-            var entity = await _context.Horario_Objetivos.FindAsync(id);
+            var entity = await _Horario_ObjetivoService.GetHorario_Objetivo(id);
+
             if (entity == null)
             {
-                return NotFound("No se encontró el objetivo");
+                return NotFound("No se encontró el registro");
             }
 
             return Ok(entity);
         }
 
         [HttpPost]
-        public async Task<ActionResult> Post(Dto.Request.DtoHorario_Objetivo request)
+        public async Task<ActionResult<Horario_Objetivo>> Post(Horario_Objetivo Horario_Objetivo)
         {
-            var entity = new Horario_Objetivo
-            {
-                HorarioId = request.HorarioId,
-                ObjetivoId = request.ObjetivoId,
-                Check = false,
-                Fecha = request.Fecha,
-                Status = true
-            };
-
-            _context.Horario_Objetivos.Add(entity);
-            await _context.SaveChangesAsync();
-
-            HttpContext.Response.Headers.Add("location", $"/api/horario_objetivo/{entity.Id}*");
-
-            return Ok();
+            await _Horario_ObjetivoService.CreateHorario_Objetivo(Horario_Objetivo);
+            return CreatedAtRoute("GetHorario_Objetivo", new { id = Horario_Objetivo.Id }, Horario_Objetivo);
         }
 
         [HttpPut("{id:int}")]
-        public async Task<ActionResult> Put(int id, Dto.Request.DtoHorario_Objetivo request)
+        public async Task<ActionResult> Put(int id, Horario_Objetivo Horario_Objetivo)
         {
-            var entity = await _context.Horario_Objetivos.FindAsync(id);
 
-            if (entity == null) return NotFound();
+            if (id != Horario_Objetivo.Id) return BadRequest();
 
-            entity.HorarioId = request.HorarioId;
-            entity.ObjetivoId = request.ObjetivoId;
-            entity.Fecha = request.Fecha;
+            await _Horario_ObjetivoService.UpdateHorario_Objetivo(Horario_Objetivo);
+            return NoContent();
 
-            _context.Entry(entity).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
-
-            return Ok(new { Id = id });
         }
 
         [HttpDelete("{id:int}")]
-        public async Task<ActionResult<Horario_Objetivo>> Delete(int id)
+        public async Task<ActionResult> Delete(int id)
         {
-            var entity = await _context.Horario_Objetivos.FindAsync(id);
-            if (entity == null)
+            var Horario_Objetivo = await _Horario_ObjetivoService.GetHorario_Objetivo(id);
+            if (Horario_Objetivo == null)
             {
-                return NotFound("No se encontró el registro");
+                return NotFound();
             }
             else
             {
-                _context.Horario_Objetivos.Remove(entity);
-                _context.SaveChanges();
-                return Ok();
+                await _Horario_ObjetivoService.DeleteHorario_Objetivo(Horario_Objetivo);
+                return NoContent();
             }
-            
-            return Ok(entity);
         }
     }
 }

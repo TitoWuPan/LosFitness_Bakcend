@@ -1,5 +1,6 @@
 ﻿using LosFitness.DataAccess;
 using LosFitness.Entities;
+using LosFitness.Service;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using static LosFitness.Dto.Request.BaseResponse;
@@ -10,36 +11,25 @@ namespace LosFitness.API.Controllers
     [Route("api/[Controller]")]
     public class UsuarioControler : ControllerBase
     {
-        private readonly LosFitnessDbContext _context;
+        private readonly IUsuarioService _UsuarioService;
                                                                                                                                                                                                                                                                                                                                                                 
-        public UsuarioControler(LosFitnessDbContext context)
+        public UsuarioControler(IUsuarioService UsuarioService)
         {
-            _context = context;
+            this._UsuarioService = UsuarioService;
         }
 
         [HttpGet]
-        public async Task<ActionResult<BaseResponseGeneric<ICollection<Usuario>>>> Get()
+        public async Task<ActionResult<IEnumerable<Usuario>>> Get()
         {
-            var response = new BaseResponseGeneric<ICollection<Usuario>>();
-            
-            try
-            {
-                response.Result = await _context.Usuarios.ToListAsync();
-                response.Success = true;
-                return Ok(response);
-            }
-            catch (Exception ex)
-            {
-                response.Errors.Add(ex.Message);
-                return response;
+            return await _UsuarioService.GetUsuarios();
 
-            }
         }
 
-        [HttpGet("{id:int}")]
+        [HttpGet("{id:int}", Name = "GetUsuario")]
         public async Task<ActionResult<Usuario>> Get(int id)
         {
-            var entity = await _context.Usuarios.FindAsync(id);
+            var entity = await _UsuarioService.GetUsuario(id);
+
             if (entity == null)
             {
                 return NotFound("No se encontró el registro");
@@ -48,60 +38,38 @@ namespace LosFitness.API.Controllers
             return Ok(entity);
         }
 
-        [HttpPost("register")]
-        public async Task<ActionResult> Post(Dto.Request.DtoUsuario request)
+        [HttpPost]
+        public async Task<ActionResult<Usuario>> Post(Usuario Usuario)
         {
-            var entity = new Usuario
-            {
-                Nombre = request.Nombre,
-                Apellido = request.Apellido,
-                Genero = request.Genero,
-                Premiun = false,
-                ImageURL = request.ImageURL,
-                Status = true
-            };
+            await _UsuarioService.CreateUsuario(Usuario);
+            return CreatedAtRoute("GetUsuario", new { id = Usuario.Id }, Usuario);
 
-            _context.Usuarios.Add(entity);
-            await _context.SaveChangesAsync();
-
-            HttpContext.Response.Headers.Add("location", $"/api/usuario/{entity.Id}*");
-
-            return Ok();
         }
 
-        [HttpPut("update/{id:int}")]
-        public async Task<ActionResult> PutFalse(int id, Dto.Request.DtoUsuario request)
+        [HttpPut("{id:int}")]
+        public async Task<ActionResult> Put(int id, Usuario Usuario)
         {
-            var entity = await _context.Usuarios.FindAsync(id);
 
-            if (entity == null) return NotFound();
+            if (id != Usuario.Id) return BadRequest();
 
-            entity.Nombre = request.Nombre;
-            entity.Apellido = request.Apellido;
-            entity.Genero = request.Genero;
-            entity.ImageURL = request.ImageURL;
+            await _UsuarioService.UpdateUsuario(Usuario);
+            return NoContent();
 
-            _context.Entry(entity).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
-
-            return Ok(new { Id = id });
         }
-        [HttpDelete("drop/{id:int}")]
-        public async Task<ActionResult<Usuario>> Delete(int id)
+
+        [HttpDelete("{id:int}")]
+        public async Task<ActionResult> Delete(int id)
         {
-            var entity = await _context.Usuarios.FindAsync(id);
-            if (entity == null)
+            var Usuario = await _UsuarioService.GetUsuario(id);
+            if (Usuario == null)
             {
-                return NotFound("No se encontró el usuario");
+                return NotFound();
             }
             else
             {
-                _context.Usuarios.Remove(entity);
-                _context.SaveChanges();
-                return Ok();
+                await _UsuarioService.DeleteUsuario(Usuario);
+                return NoContent();
             }
-
-            return Ok(entity);
         }
     }
 }

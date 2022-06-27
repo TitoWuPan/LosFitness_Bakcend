@@ -9,26 +9,26 @@ namespace LosFitness.API.Controllers
 {
     [ApiController]
     [Route("api/[Controller]")]
-    public class ObjetivoControler : ControllerBase
+    public class AlergiaControler : ControllerBase
     {
-        private readonly IObjetivoService _ObjetivoService;
+        private readonly IAlergiaService _alergiaService;
                                                                                                                                                                                                                                                                                                                                                                 
-        public ObjetivoControler(IObjetivoService ObjetivoService)
+        public AlergiaControler(IAlergiaService AlergiaService)
         {
-            this._ObjetivoService = ObjetivoService;
+            this._alergiaService = AlergiaService;
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Objetivo>>> Get()
+        public async Task<ActionResult<IEnumerable<Alergia>>> Get()
         {
-            return await _ObjetivoService.GetObjetivos();
+            return await _alergiaService.GetAlergias();
 
         }
 
-        [HttpGet("{id:int}", Name = "GetObjetivo")]
-        public async Task<ActionResult<Objetivo>> Get(int id)
+        [HttpGet("{id:int}", Name = "GetAlergia")]
+        public async Task<ActionResult<Alergia>> Get(int id)
         {
-            var entity = await _ObjetivoService.GetObjetivo(id);
+            var entity = await _alergiaService.GetAlergia(id);
 
             if (entity == null)
             {
@@ -39,20 +39,20 @@ namespace LosFitness.API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Objetivo>> Post(Objetivo Objetivo)
+        public async Task<ActionResult<Alergia>> Post(Alergia Alergia)
         {
-            await _ObjetivoService.CreateObjetivo(Objetivo);
-            return CreatedAtRoute("GetObjetivo", new { id = Objetivo.Id }, Objetivo);
+            await _alergiaService.CreateAlergia(Alergia);
+            return CreatedAtRoute("GetAlergia", new { id = Alergia.Id }, Alergia);
 
         }
 
         [HttpPut("{id:int}")]
-        public async Task<ActionResult> Put(int id, Objetivo Objetivo)
+        public async Task<ActionResult> Put(int id, Alergia Alergia)
         {
 
-            if (id != Objetivo.Id) return BadRequest();
+            if (id != Alergia.Id) return BadRequest();
 
-            await _ObjetivoService.UpdateObjetivo(Objetivo);
+            await _alergiaService.UpdateAlergia(Alergia);
             return NoContent();
 
         }
@@ -60,14 +60,14 @@ namespace LosFitness.API.Controllers
         [HttpDelete("{id:int}")]
         public async Task<ActionResult> Delete(int id)
         {
-            var Objetivo = await _ObjetivoService.GetObjetivo(id);
-            if (Objetivo == null)
+            var Alergia = await _alergiaService.GetAlergia(id);
+            if (Alergia == null)
             {
                 return NotFound();
             }
             else
             {
-                await _ObjetivoService.DeleteObjetivo(Objetivo);
+                await _alergiaService.DeleteAlergia(Alergia);
                 return NoContent();
             }
         }

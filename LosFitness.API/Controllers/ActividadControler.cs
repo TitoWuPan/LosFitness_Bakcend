@@ -1,5 +1,6 @@
 ﻿using LosFitness.DataAccess;
 using LosFitness.Entities;
+using LosFitness.Service;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using static LosFitness.Dto.Request.BaseResponse;
@@ -10,37 +11,25 @@ namespace LosFitness.API.Controllers
     [Route("api/[Controller]")]
     public class ActividadControler : ControllerBase
     {
-        private readonly LosFitnessDbContext _context;
+        private readonly IActividadService _actividadService;
                                                                                                                                                                                                                                                                                                                                                                 
-        public ActividadControler(LosFitnessDbContext context)
+        public ActividadControler(IActividadService actividadService)
         {
-            _context = context;
+            this._actividadService = actividadService;
         }
 
         [HttpGet]
-        public async Task<ActionResult<BaseResponseGeneric<ICollection<Actividad>>>> Get()
+        public async Task<ActionResult<IEnumerable<Actividad>>> Get()
         {
-            var response = new BaseResponseGeneric<ICollection<Actividad>>();
-            
-            try
-            {
-                response.Result = await _context.Actividads.ToListAsync();
-                response.Success = true;
-                return Ok(response);
-            }
-            catch (Exception ex)
-            {
-                response.Errors.Add(ex.Message);
-                return response;
+            return await _actividadService.GetActividads();
 
-            }
-           
         }
 
-        [HttpGet("{id:int}")]
+        [HttpGet("{id:int}", Name = "GetActividad")]
         public async Task<ActionResult<Actividad>> Get(int id)
         {
-            var entity = await _context.Actividads.FindAsync(id);
+            var entity = await _actividadService.GetActividad(id);
+
             if (entity == null)
             {
                 return NotFound("No se encontró el registro");
@@ -50,55 +39,36 @@ namespace LosFitness.API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Post(Dto.Request.DtoActividad request)
+        public async Task<ActionResult<Actividad>> Post(Actividad actividad)
         {
-            var entity = new Actividad
-            {
-                Titulo = request.Titulo,
-                Describcion = request.Describcion,
-                Status = true
-            };
-
-            _context.Actividads.Add(entity);
-            await _context.SaveChangesAsync();
-
-            HttpContext.Response.Headers.Add("location", $"/api/actividad/{entity.Id}*");
-
-            return Ok();
+            await _actividadService.CreateActividad(actividad);
+            return CreatedAtRoute("GetActividad", new { id = actividad.Id }, actividad); 
         }
 
         [HttpPut("{id:int}")]
-        public async Task<ActionResult> Put(int id, Dto.Request.DtoActividad request)
+        public async Task<ActionResult> Put(int id, Actividad actividad)
         {
-            var entity = await _context.Actividads.FindAsync(id);
 
-            if (entity == null) return NotFound();
+            if (id != actividad.Id) return BadRequest();
 
-            entity.Titulo = request.Titulo;
-            entity.Describcion = request.Describcion;
+            await _actividadService.UpdateActividad(actividad);
+            return NoContent();
 
-            _context.Entry(entity).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
-
-            return Ok(new { Id = id });
         }
 
         [HttpDelete("{id:int}")]
-        public async Task<ActionResult<Actividad>> Delete(int id)
+        public async Task<ActionResult> Delete(int id)
         {
-            var entity = await _context.Actividads.FindAsync(id);
-            if (entity == null)
+            var actividad = await _actividadService.GetActividad(id);
+            if (actividad == null)
             {
-                return NotFound("No se encontró el registro");
+                return NotFound();
             }
             else
             {
-                _context.Actividads.Remove(entity);
-                _context.SaveChanges();
-                return Ok();
+                await _actividadService.DeleteActividad(actividad);
+                return NoContent();
             }
-
-            return Ok(entity);
         }
     }
 }
